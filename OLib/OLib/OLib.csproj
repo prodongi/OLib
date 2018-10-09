@@ -67,12 +67,16 @@
     <Compile Include="Object\AttributeVariable\Type\AttributeVariableFloat.cs" />
     <Compile Include="Object\AttributeVariable\Type\AttributeVariableInt.cs" />
     <Compile Include="Object\AttributeVariable\Type\AttributeVariableType.cs" />
-    <Compile Include="Object\Disposable.cs" />
-    <Compile Include="Object\MonoDisposable.cs" />
+    <Compile Include="Object\Disposable\Disposable.cs" />
+    <Compile Include="Object\Disposable\MonoDisposable.cs" />
     <Compile Include="Object\Entity.cs" />
     <Compile Include="Object\EntityCreateData.cs" />
+    <Compile Include="Object\Model\EntityModel.cs" />
+    <Compile Include="Object\Model\EntityModelDummy.cs" />
     <Compile Include="Object\ObjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource\ResourceManager.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
