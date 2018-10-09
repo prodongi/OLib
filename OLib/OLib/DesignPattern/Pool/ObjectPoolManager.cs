@@ -23,7 +23,7 @@ namespace OLib
     }
 
     [ComVisible(false)]
-    public class ObjectPoolManager<T, POOL> : MonoSingleton<T> where T : MonoBehaviour where POOL : ObjectPool, new() {
+    public abstract class ObjectPoolManager<T, POOL> : MonoSingleton<T> where T : MonoBehaviour where POOL : ObjectPool, new() {
         private class DelayPoolInfo
         {
             public float m_elapsedTime = 0.0f;
@@ -36,6 +36,8 @@ namespace OLib
         private bool m_usePool = false;
         private Dictionary<string, POOL> m_pools = new Dictionary<string, POOL>();
         private List<DelayPoolInfo> m_delayPoolInfo = new List<DelayPoolInfo>();
+
+        protected abstract void instantiatePool(PoolInstantiateData data, Action<GameObject, string> callback);
 
         void Update()
         {
@@ -162,12 +164,6 @@ namespace OLib
 
                 return obj;
             }
-        }
-
-        protected virtual void instantiatePool(PoolInstantiateData data, Action<GameObject, string> callback)
-        {
-            if (null != callback)
-                callback(null, "need override instantiate");
         }
 
         public void push(GameObject obj)

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace OLib.DesignPattern
+namespace OLib
 {
-    public class UuidCreator {
+    public class UuidCreator : Disposable {
         private int m_uuid = 0;
 
         public int make()
@@ -13,9 +13,14 @@ namespace OLib.DesignPattern
             return ++m_uuid;
         }
 
-        public void initialize()
+        protected override void Dispose(bool disposing)
         {
-            m_uuid = 0;
+            base.Dispose(disposing);
+
+            if (disposing)
+            {
+                m_uuid = 0;
+            }
         }
     }
 }

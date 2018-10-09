@@ -67,7 +67,10 @@
     <Compile Include="Object\AttributeVariable\Type\AttributeVariableFloat.cs" />
     <Compile Include="Object\AttributeVariable\Type\AttributeVariableInt.cs" />
     <Compile Include="Object\AttributeVariable\Type\AttributeVariableType.cs" />
+    <Compile Include="Object\Disposable.cs" />
+    <Compile Include="Object\MonoDisposable.cs" />
     <Compile Include="Object\Entity.cs" />
+    <Compile Include="Object\EntityCreateData.cs" />
     <Compile Include="Object\ObjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
