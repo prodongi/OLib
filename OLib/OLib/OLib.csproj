@@ -21,6 +21,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\OLib.xml</DocumentationFile>
+    <NoWarn>1591, 1587</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +31,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\OLib.xml</DocumentationFile>
+    <NoWarn>1591, 1587</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -40,10 +44,29 @@
     <Reference Include="UnityEngine">
       <HintPath>..\..\Dll\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>..\..\Dll\UnityEngine.UI.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DesignPattern\MonoSingleton.cs" />
+    <Compile Include="Debug\Console.cs" />
+    <Compile Include="Debug\DebugGraphic\DebugCircleRenderer.cs" />
+    <Compile Include="Debug\DebugGraphic\DebugGraphic.cs" />
+    <Compile Include="Debug\DebugGraphic\DebugLineRenderer.cs" />
+    <Compile Include="Debug\DebugGraphic\DebugRenderer.cs" />
+    <Compile Include="DesignPattern\Pool\ObjectBasePool.cs" />
+    <Compile Include="DesignPattern\Pool\ObjectPool.cs" />
+    <Compile Include="DesignPattern\Pool\ObjectPoolManager.cs" />
+    <Compile Include="DesignPattern\Pool\Pool.cs" />
+    <Compile Include="DesignPattern\Singleton\MonoSingleton.cs" />
+    <Compile Include="DesignPattern\Singleton\NotMonoSingleton.cs" />
     <Compile Include="DesignPattern\UuidCreator.cs" />
+    <Compile Include="Helper\GraphicHelper.cs" />
+    <Compile Include="Object\AttributeVariable\AttributeVariable.cs" />
+    <Compile Include="Object\AttributeVariable\Type\AttributeVariableBool.cs" />
+    <Compile Include="Object\AttributeVariable\Type\AttributeVariableFloat.cs" />
+    <Compile Include="Object\AttributeVariable\Type\AttributeVariableInt.cs" />
+    <Compile Include="Object\AttributeVariable\Type\AttributeVariableType.cs" />
     <Compile Include="Object\Entity.cs" />
     <Compile Include="Object\ObjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
