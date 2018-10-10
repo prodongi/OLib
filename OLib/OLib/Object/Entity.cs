@@ -10,10 +10,12 @@ namespace OLib
         private AttributeVariable m_variable = new AttributeVariable();
         private Transform m_transform = null;
         private EntityModel m_model = null;
+        private AI m_ai = null;
 
         public int uuid { get { return m_uuid; } }
         public virtual Vector3 position { get { return m_transform.position; } set { m_transform.position = value; } }
         public AttributeVariable variable { get { return m_variable; } }
+        public AI ai { get { return m_ai; } protected set { m_ai = value; } }
         public EntityModel model
         {
             get
@@ -46,6 +48,27 @@ namespace OLib
             m_uuid = _uuid;
             m_tableId = createData.tableId;
             m_transform = transform;
+            position = createData.position;
+        }
+
+        void Update()
+        {
+            try
+            {
+                update();
+            }
+            catch(System.Exception e)
+            {
+                OLib.Console.exception(e);
+            }
+        }
+
+        protected virtual void update()
+        {
+            if (null != m_ai)
+                m_ai.update();
+            if (null != m_model)
+                m_model.update();
         }
 
         protected override void Dispose(bool disposing)

@@ -49,7 +49,7 @@ namespace OLib
         /**
          * @brief key의 프리팹의 인스턴스를 얻는다.
          */
-        public GameObject getInstance(string pathName, Vector3 scaleFactor, Vector3 position, GameObject parent = null, bool isUi = false, string name = null, string _tag = null)
+        public GameObject getInstance(string pathName, Vector3 localScaleFactor, Vector3 localPosition, GameObject parent = null, bool isUi = false, string name = null, string _tag = null)
         {
             GameObject prefab = findResource<GameObject>(pathName);
             if (!prefab)
@@ -79,8 +79,8 @@ namespace OLib
             if (null != _tag)
                 inst.tag = _tag;
 
-            inst.transform.localScale = new Vector3(localScale.x * scaleFactor.x, localScale.y * scaleFactor.y, localScale.z * scaleFactor.z);
-            inst.transform.position = position;
+            inst.transform.localScale = new Vector3(localScale.x * localScaleFactor.x, localScale.y * localScaleFactor.y, localScale.z * localScaleFactor.z);
+            inst.transform.localPosition = localPosition;
             inst.transform.localRotation = new Quaternion();
 
             return inst;

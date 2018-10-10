@@ -22,7 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Debug\OLib.xml</DocumentationFile>
-    <NoWarn>1591, 1587</NoWarn>
+    <NoWarn>1591, 1587, 1573</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,7 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\OLib.xml</DocumentationFile>
-    <NoWarn>1591, 1587</NoWarn>
+    <NoWarn>1591, 1587, 1573</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AI\AI.cs" />
+    <Compile Include="AI\Goal.cs" />
     <Compile Include="Debug\Console.cs" />
     <Compile Include="Debug\DebugGraphic\DebugCircleRenderer.cs" />
     <Compile Include="Debug\DebugGraphic\DebugGraphic.cs" />
@@ -62,6 +64,8 @@
     <Compile Include="DesignPattern\Singleton\NotMonoSingleton.cs" />
     <Compile Include="DesignPattern\UuidCreator.cs" />
     <Compile Include="Helper\GraphicHelper.cs" />
+    <Compile Include="DesignPattern\Msg\Msg.cs" />
+    <Compile Include="DesignPattern\Msg\MsgManager.cs" />
     <Compile Include="Object\AttributeVariable\AttributeVariable.cs" />
     <Compile Include="Object\AttributeVariable\Type\AttributeVariableBool.cs" />
     <Compile Include="Object\AttributeVariable\Type\AttributeVariableFloat.cs" />

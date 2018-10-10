@@ -9,6 +9,9 @@ namespace OLib
     public class EntityModel : ObjectBasePool {
         [SerializeField] EntityModelDummy m_dummy = new EntityModelDummy();
 
+        public virtual void update()
+        {
 
+        }
     }
 }
