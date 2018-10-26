@@ -56,7 +56,7 @@ namespace OLib
             m_deletes.Clear();
         }
 
-        public E create<E>(EntityCreateData createData) where E : Entity, new()
+        public virtual E create<E>(EntityCreateData createData) where E : Entity, new()
         {
             OLib.Console.assert(null != createData, "createData is null");
 

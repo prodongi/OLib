@@ -80,6 +80,8 @@
     <Compile Include="Object\ObjectManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource\ResourceManager.cs" />
+    <Compile Include="Time\TimeManager.cs" />
+    <Compile Include="Time\Timer.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
